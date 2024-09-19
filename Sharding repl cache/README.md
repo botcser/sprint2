@@ -15,7 +15,6 @@ docker compose up -d
 );
 > exit();
 
-
 # docker exec -it redis_1 /bin/sh
 > redis-cli cluster nodes
 
@@ -26,4 +25,3 @@ f2d72c24758eccca758885168bc708d07b737e2b 173.17.0.5:6379@16379 slave 91f3daa5add
 8fd7af63fe7a6bbac0fa9cf8c069f3a9a7b8b7e0 173.17.0.2:6379@16379 myself,master - 0 0 1 connected 0-5460
 91f3daa5add1997a47be15099dbfaefe9789da2e 173.17.0.4:6379@16379 master - 0 1726778884000 3 connected 10923-16383
 45fa22bd16e30f6ba7e91c0cf983fd16fc129a3a 173.17.0.3:6379@16379 master - 0 1726778884460 2 connected 5461-10922
-
