@@ -14,6 +14,3 @@ docker compose up -d
   }
 );
 > exit();
-
-# docker exec -it redis_1 /bin/sh
-> redis-cli cluster nodes
