@@ -1,5 +1,5 @@
 services:
-  # configSrv
+  # configSrv TRY7
   configSrv:
     image: dh-mirror.gitverse.ru/mongo:latest
     container_name: configSrv 
