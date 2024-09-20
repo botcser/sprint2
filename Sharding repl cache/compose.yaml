@@ -311,13 +311,13 @@ services:
       - mongos_router1
     ports:
       - 8080:8080
-    networks:
+    networks:                                           #<--
       app-network:
         ipv4_address: 173.17.0.99
     environment:
-      MONGODB_URL: "mongodb://mongos_router1:27018"
+      MONGODB_URL: "mongodb://mongos_router1:27018"     #<--
       MONGODB_DATABASE_NAME: "somedb"
-      REDIS_URL: "redis://redis_1:6379"
+      REDIS_URL: "redis://redis_1:6379"                 #<--
 
 networks:
   app-network:
