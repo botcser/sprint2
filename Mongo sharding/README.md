@@ -18,7 +18,7 @@ rs.initiate( { _id : "shard2", members: [ { _id : 1, host : "shard2:27021" } ] }
 
 #docker exec -it mongos_router mongosh --port 27020
 
-sh.addShard( "shard1/shard1:27018"); sh.addShard( "shard2/shard2:27019");
+sh.addShard( "shard1/shard1:27020"); sh.addShard( "shard2/shard2:27021");
 
 sh.enableSharding("somedb"); sh.shardCollection("somedb.helloDoc", { "name" : "hashed" } )
 
@@ -26,6 +26,6 @@ use somedb
 
 for(var i = 0; i < 1000; i++) db.helloDoc.insert({age:i, name:"ly"+i})
 
-db.helloDoc.countDocuments() exit();
+db.helloDoc.countDocuments(); exit();
 
 Приложение работает и показывает общее количество документов в базе (1000), а также количество документов в каждом из шардов.

@@ -33,7 +33,7 @@ docker compose up -d
 ]}) 
 > exit();
 
-#docker exec -it mongos_router mongosh --port 27018
+#docker exec -it mongos_router1 mongosh --port 27018
 
 > sh.addShard( "shard1/shard1:27020");
 > sh.addShard( "shard2/shard2:27030");
